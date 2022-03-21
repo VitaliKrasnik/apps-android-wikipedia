@@ -35,6 +35,9 @@ jobs:
           name: Assemble release build
           command: |
             ./gradlew -q clean assembleDevDebug
+      
+      - store_artifacts:
+          path: /app/build/outputs/apk/dev/debug/app-dev-debug.apk 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
